@@ -25,6 +25,38 @@
 [Styling Tables with Bootstrap](#styling-tables-with-bootstrap)
 
 
+# Introduction
+
+[Back](#bootstrap) | [Forward](#exploring-bootstrap)
+
+## 🌐 Overview of Modern Web Development Tools
+Many of today’s modern websites use some form of **content management system (CMS)** or **web framework**. These tools provide structured environments that help developers create **beautiful**, **responsive**, and **maintainable** webpages far more efficiently than working with a standard text editor alone.
+
+A **CMS** handles content creation and organization, while a **web framework** provides reusable code patterns, layout systems, and styling conventions. Both approaches reduce the amount of manual coding required and ensure greater consistency across pages.
+
+## 🧱 Introduction to Bootstrap (Framework Focus)
+This chapter provides an introduction to **Bootstrap**, a popular **front-end web framework** designed to simplify the process of creating **responsive** webpages. Bootstrap includes:
+
+- A **CSS foundation** with normalized styling  
+- A structured **grid system**  
+- A suite of UI **components**  
+- Built-in **JavaScript behaviors**  
+- A library of **utility classes**  
+
+Throughout this chapter, you will learn how to:
+
+- Use **Bootstrap’s starter template** as a foundation for your webpage  
+- Integrate and design a **responsive navigation system** using Bootstrap components  
+- Create a **hero feature** using Bootstrap’s layout and utility classes  
+- Use the **Bootstrap grid system** to organize webpage content  
+- Style **text**, **images**, and a **table** using predefined Bootstrap classes  
+
+## 🗂️ CMS Awareness
+Finally, this chapter introduces the basics of **content management systems**, helping you understand how Bootstrap-based development fits within larger website architectures used in industry.
+
+[Back Home](#bootstrap)
+
+
 <br>
 <br>
 <br>
