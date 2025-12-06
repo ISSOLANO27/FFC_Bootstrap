@@ -5,6 +5,14 @@
 */
 
 /* Begin Mobile Styles */
+/* ===========================
+   RESET
+   =========================== */
+body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption, section, article, audio, video {
+    margin: 0;
+    padding: 0; 
+    border: 0;
+}
 
 /* Show mobile class, hide tablet-desktop class and menu-links id */
 .mobile {
