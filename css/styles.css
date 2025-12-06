@@ -1,693 +1,89 @@
 /*
-Author: Israel Solano
-File Name: styles.css
-Date: 10/04/2025
+    Student Name:
+    File Name:
+    Date: 
 */
 
-/* ===========================
-   RESET
-   =========================== */
-body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption, section, article, audio, video {
-    margin: 0;
-    padding: 0; 
-    border: 0;
-}
+/* Begin Mobile Styles */
 
-/* Images and video scale responsively */
-img, video {
-    max-width: 100%;
-    display: block;
-
-}
-
-/* Global box sizing */
-* {
-    box-sizing: border-box; 
-}
-
-/* Style rules for skip navigation link */
-.skip {
-    position: absolute;
-    left: -999px;
-}
-
-.skip:focus {
-    color: #000;
-    background-color: #fff;
-    text-decoration: none;
-    padding: 0.5%;
-    top: auto;
-    left: auto;
-    right: 1px;
-    z-index: 1;
-}
-
-/* ===========================
-   BASE STYLES
-   =========================== */
-
-body {
-    background-color: #000;          /* black outside main container (chapter 6 look) */
-}
-
-/* Mobile-only wrapper */
+/* Show mobile class, hide tablet-desktop class and menu-links id */
 .mobile {
     display: block;
 }
 
-/* Desktop/tablet intro text hidden on mobile */
-#intro {
-    display: none;
-}
-
-/* Tablet/desktop nav hidden on mobile */
 .tablet-desktop {
     display: none;
 }
 
-/* Hero is tablet/desktop only by default */
-.hero {
-    display: none;
+/* Style rules for hero image and header */
+
+
+/* Style rule for Nutrition hero text */
+#nutr.display-1 {
+    font-size: 4em;
 }
 
-/*
-    Mobile hamburger dropdown container:
-    - Starts hidden
-    - JS toggles display between none/block
-*/
-#menu-links {
-    display: none;
-    background-color: #000;   /* black dropdown background */
-}
-
-/* Header with centered logo (non-flex for stability) */
-header {
-    text-align: center;
-    padding: 1rem;
-    background-color: #000;   /* black bar */
-    /* justify-content here is harmless but unused, kept for consistency */
-    justify-content: center;
-}
-
-/* Logo image (mobile-sized by default) */
-#ffc-logo img {
-    display: block;
-    margin: 0 auto;
-    width: 70%;               /* mobile: nice big logo */
-    max-width: 260px;
-    height: auto;
-}
-
-/* Logo container */
-#ffc-logo {
-    width: 100%;
-}
-
-/* Hamburger & mobile nav links */
-.mobile-nav a {
-    color: #fff;
-    font-family: 'Francois One', sans-serif;
-    text-align: center;
-    font-size: 2em;
-    text-decoration: none;
-    padding: 3%;
-    display: block;
-}
-
-/* The hamburger icon itself */
-.mobile-nav a.menu-icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;   /* sits in the top-right of the page */
-}
-
-/* Main content area */
-main {
-    padding: 2%;
-    background-color: #fff;   /* chapter 6-style white main area */
-    font-size: 1.15em;
-    font-family: 'Roboto Slab', serif;
-}
-
-.mobile h3 {
-    text-shadow: 5px 5px 8px #ccc;
-}
-
-article {
-    padding: 2%;
-}
-
-article h3 {
-    text-align: center;
-}
-
-article img {
-    margin: 0 auto;
-}
-
-article ul {
-    margin-left: 10%;
-}
-
-article:nth-of-type(2) {
-    background-color: rgba(204, 204, 204, 0.3);
-}
-
-main p {
-    font-size: 1.25em;
-}
-
-.action {
-    font-size: 1.3em;
-    color: #666600;
-    font-weight: bold;
-}
-
-.frame {
-    position: relative;
-    max-width: 450px;
-    margin: 2% auto;
-}
-
-.pic-text {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-/* Lessons (classes page) sections */
-#piano, #guitar, #violin {
-    margin: 0 2%;
-}
-
-/* About page sections */
-#weights, #cardio, #training {
-    margin: 0% 2%;  /* top/bottom 0, left/right 2% */
-
-}
-
-/* Exercises block will get more styling in tablet+ media query */
-
-#info {
-    clear: left;
-    background-color: #c0caf7;
-    padding: 1% 2%;
-}
-
-#info ul {
-    margin-left: 10%;
-}
-
-.round {
-    border-radius: 8px;
-}
-
-/* External link styling (About page) */
-.external-link {
-    color: #666600;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* Hours list (Home page mobile) */
-.hours {
-    margin-left: 10%;
-}
-
-/* Contact page links */
-#contact .contact-email-link {
-    text-align: center;
-}
-
-.tel-link {
-    background-color: #373684;
-    padding: 2%;
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
-    border-radius: 5px;
-} 
-
-/* Tel link hover/focus (from Chapter 6) */
-.tel-link:hover {
-    background-color: #3cb371;
-    color: #fff;
-}
-
-.tel-link:focus {
-    outline: 3px solid #3cb371;
-    outline-offset: 3px;
-}
-
-.tel-link a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    display: block;
-}
-
-#contact a {
-    color: #666600;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Map iframe */
+/* Style rule for map */
 .map {
     border: 2px solid #000;
     width: 95%;
     height: 50%;
 }
 
-#form {
-    margin-top: 2%;
-    background-color: #fff;
-    padding: 2%;
-}
-
-#form h2 {
-    text-align: center;
-}
-
-/* Styles for form elements */
-fieldset, input, select, textarea {
-    margin-bottom: 2%;
-}
-
-fieldset {
-    font-weight: bold;
-    font-size: 1.25em;
-}
-
+/* Style rule for labels */
 label {
     display: block;
     padding-top: 3%;
 }
 
-form #submit {
-    margin: 0 auto;
-    border: none;
-    display:block;
-    padding: 2%;
-    background-color: #b3b3b3;
-    font-size: 1em;
-    border-radius: 10px;
-}
+/* Media Query for Tablet Viewport */
+@media (min-width: 768px) {  
 
-/* Footer */
-footer .copyright {
-    text-align: center;
-    font-size: 0.75em; 
-    clear: left;
-    color: #fff;
-    padding: 2% 4%;
-    float: left;
-    width: 75%;
-}
-
-footer p a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.social {
-    float: right;
-    width: 20%;
-    padding: 2%;
-}
-
-.social img {
-    display: inline-block;
-    padding: 5%;
-}
-
-/* ===========================
-   TABLET VIEWPORT (≥ 550px)
-   =========================== */
-@media screen and (min-width: 550px), print {
-
-
-
-    /* Keep exercises block below the two-column layout */
-
-    /* Show full intro on tablet+ */
-    #intro {
-        display: block;
-    }
-
-    /* Hide mobile-only content on tablet+ */
-    .mobile {
-        display: none;
-    }
-
-    /* Hide mobile hamburger nav entirely */
-    .mobile-nav {
-        display: none;
-    }
-
-    /* Keep dropdown menu container hidden on tablet+ */
-    #menu-links {
-        display: none;
-    }
-
-    /* Show horizontal nav */
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
     .tablet-desktop {
         display: block;
     }
 
-    /* Show hero images on tablet+ */
-    .hero {
-        display: block;
-    }
-
-    /* Navigation bar styling (tablet & desktop) */
-    nav {
-        padding: 1%;
-        margin-bottom: 0%;
-        background-color: #000;
-    }
-
-    nav ul {
-        list-style-type: none;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav li {
-        display: inline-block;
-        font-family: 'Francois One', sans-serif;
-        border-right: 1px solid #fff;
-        padding: 0;
-    }
-
-    nav li:last-child {
-        border-right: none;
-    }
-
-    nav li a {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 0.1em 0.75em;
-        font-size: 1.25em;
-    }
-
-    /* Larger logo for tablet (book-style) */
-    #ffc-logo img {
-        width: 80%;
-        max-width: 340px;
-    }
-
-    /* Two-column grid layout (used on index, nutrition) */
-    .grid {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 20px;
-    }
-
-    .pic-text {
-        font-size: 1em;
-        padding: 10px;
-    }
-
-    aside {
-        text-align: center;
-        font-size: 1.25em;
-        font-style: italic;
-        font-weight: bold;
-        padding: 2%;
-        background-color: rgba(204, 204, 204, 0.5);
-        box-shadow: 5px 5px 8px #000;
-        text-shadow: 5px 5px 5px #b3b3b3;
-        border-radius: 0 15px;
-    }
-
-
-    /* Restored Nutrition Aside Styling */
-    .grid-item4 {
-        grid-column: 1 / span 3;
-    }
-
-    .grid-item4 p {
-        margin-bottom: 1rem;
-    }
-
-    .map {
-        width: 100%;
-        height: 400px;
-    }
-
-    /* Table styling for Classes page */
-    table {
-        border: 1px solid #000;
-        border-collapse: collapse;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    caption {
-        font-size: 1.5em;
-        font-weight: bold;
-        padding: 1%;
-    }
-
-    th, td {
-        border: 1px solid #000;
-        padding: 2%;
-    }
-
-    th {
-        background-color: #000;
-        color: #fff;
-        font-size: 1.15em;
-    }
-
-    tr:nth-child(odd) {
-        background-color: #ccc;
-    }
-
-    main ul {
-        margin: 0 0 4% 10%;
-    }
-
-        /* About page: 2-column layout for sections on tablet */
-    #weights,
-    #cardio,
-    #training {
-        width: 48%;           /* two columns */
-        float: left;
-        margin: 1%;           /* bit of breathing room */
-        box-sizing: border-box;
-    }
-
-    /* About page: exercises block styling (tablet+) */
-    #exercises {
-        clear: left;
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-        background: linear-gradient(to right, #ccc, #fff);
-        background-color: #f2f2f2;
-        padding: 1% 2%;
-    }
-
-    #exercises dt {
-        font-weight: bold;
-    }
-
-    #exercises dd {
-        padding: 0.5% 1% 2% 0;
-    }
-
-    .viewex {
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    #example {
-        display: none; /*video on exercises is hidden*/
-    }
-
-    .tel-num {
-        font-size: 1.25em;
-    }
-
-    .offer:hover {
-        transform: scale(1.25);
-        cursor: pointer;
-    }
-
-    form {
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    /* Tablet Viewport: Animations */
-    @-webkit-keyframes text-animation {
-        0% {font-size: 1em; }
-        50% { font-size: 2em; }
-        100% { font-size: 1.35em; }
-    }
-
-    @keyframes text-animation {
-        0% {font-size: 1em; }
-        50% { font-size: 2em; }
-        100% { font-size: 1.35em; }
+    .mobile {
+        display: none;
     }
     
-    figcaption {
-    -webkit-animation-name: text-animation;
-    animation-name: text-animation;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
+    /* Tablet Viewport: Nutrition hero text */
+    #nutr.display-1 {
+        font-size: 6em;
     }
-
+    
+    /* Tablet Viewport: Style rule for map */
+    .map {
+        width: 600px;
+        height: 450px;
+    }
+    
+     /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
 
 }
 
-/* ===========================
-   DESKTOP VIEWPORT (≥ 769px)
-   =========================== */
-@media screen and (min-width: 769px), print {
+/* Media Query for Desktop Viewport */
+@media (min-width: 992px) {  
 
-
-    /* About page: 3-column layout for sections on desktop */
-    #weights,
-    #cardio,
-    #training {
-        width: 30%;           /* three columns */
-        float: left;
-        margin: 0 1.5%;       /* space between columns */
-        box-sizing: border-box;
-    }
-
-    /* Exercises block stays below the 3-column row */
-    #exercises {
-        clear: left;
-    }
-
-
-    header {
-        padding: 2%;
-        background-color: #000;
-    }
-
-    /* Even larger logo for desktop */
-    #ffc-logo img {
-        width: 90%;
-        max-width: 380px;
-    }
-
-    nav li a {
-        padding: 0.5em 1.5em;
-    }
-
-    nav li a:hover {
-        color: #000;
-        background-color: #fff;
-        transform: scale(1.3);
-    }
-
-    #info ul {
-        margin: 5%;
-    }
-
-    main h1 {
-        font-size: 1.8em;
-    }
-
-    article h3 {
-        font-size: 1.75;
-    }
-
-    .pic-text {
-        font-size: 1.5em;
-        padding: 20px;
-    }
-
-    /* Three columns for lessons (Classes) */
-    #piano, #guitar, #violin {
-        width: 29%;
-        float: left;
-        margin: 0 2%;
-    }
-
-    figcaption {
-        font-size: 1em;
-    }
-
-    aside {
-        grid-column: 1 / span 4;
-    }
-
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    /* Hover effect for image frames (index page) */
-    .frame {
-        opacity: 0.9;
-    }
-
-    .frame:hover {
-        opacity: 1;
-        box-shadow: 8px 8px 10px #808080;
-        transform: translateY(10px);
-    }
-
-    /* Desktop Viewport: style rules for form elements */
+    /* Desktop Viewport: Style rules for form */
     form {
         width: auto;
+        margin-bottom: 2%;
     }
-
+    
     .form-grid {
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-gap: 20px;
+        grid-gap: 20px; 
     }
-
+    
     .btn {
         grid-column: 1 / span 3;
     }
 
 }
-
-/* ===========================
-   LARGE DESKTOP (≥ 1921px)
-   =========================== */
-@media screen and (min-width: 1921px) {
-
-    #container {
-        width: 1920px;
-        margin: 0 auto;
-    }
-
-    table {
-        width: 80%;
-    }
-}
-
-/* ===========================
-   PRINT STYLES
-   =========================== */
-@media print {
-    body {
-        background-color: #fff;
-        color: #000;
-    }
-}
-
-
-
-
-
